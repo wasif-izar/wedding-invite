@@ -159,6 +159,11 @@
       </button>
 
       <p class="tap-hint">Tap to Open</p>
+      <div class="tap-arrow" aria-hidden="true">
+        <svg viewBox="0 0 24 14" xmlns="http://www.w3.org/2000/svg" width="22" height="13">
+          <path d="M2,2 L12,12 L22,2" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
     </div>
   </section>
 
@@ -312,8 +317,6 @@
         </svg>
       </div>
     </section>
-
-    <!-- ── Floral Section Divider ── -->
     <div class="section-divider" aria-hidden="true">
       <svg viewBox="0 0 800 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
         <rect width="800" height="46" fill="#F2E4CC"/>
@@ -502,8 +505,15 @@
 
   </main>
 
+  <!-- Scroll hint (fixed overlay, shown via JS after invite opens) -->
+  <div class="scroll-hint" id="scroll-hint" aria-hidden="true">
+    <svg viewBox="0 0 20 34" xmlns="http://www.w3.org/2000/svg" width="32" height="52">
+      <rect x="1" y="1" width="18" height="32" rx="9" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+      <circle class="scroll-dot" cx="10" cy="9" r="2.5" fill="currentColor"/>
+    </svg>
+  </div>
+
 
   <script src="script.js"></script>
 </body>
 </html>
-
