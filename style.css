@@ -273,6 +273,17 @@ img, svg { display: block; max-width: 100%; }
   50%       { opacity: 1; }
 }
 
+.tap-arrow {
+  color: var(--gold);
+  opacity: 0.6;
+  margin-top: 2px;
+  animation: tap-arrow-bounce 1.8s ease-in-out infinite;
+}
+@keyframes tap-arrow-bounce {
+  0%, 100% { transform: translateY(0);   opacity: 0.5; }
+  50%       { transform: translateY(7px); opacity: 1; }
+}
+
 /* Opening-screen exit animation */
 .opening-screen.exit {
   animation: screen-exit 0.9s cubic-bezier(0.4,0,0.2,1) forwards;
@@ -942,6 +953,39 @@ img, svg { display: block; max-width: 100%; }
   width: 100%;
   max-width: 380px;
 }
+
+/* ══════════════════════════════════════════════════════════
+   SCROLL HINT
+   ══════════════════════════════════════════════════════════ */
+.scroll-hint {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--gold-dark);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 500;
+  transition: opacity 0.6s ease;
+}
+.scroll-hint.show {
+  animation: scroll-hint-appear 0.8s ease forwards;
+}
+.scroll-hint.hide {
+  opacity: 0 !important;
+  transition: opacity 0.4s ease;
+}
+.scroll-dot {
+  animation: scroll-dot-drop 1.6s ease-in-out infinite;
+}
+@keyframes scroll-hint-appear {
+  to { opacity: 0.55; }
+}
+@keyframes scroll-dot-drop {
+  0%   { transform: translateY(0);    opacity: 1; }
+  60%  { transform: translateY(12px); opacity: 0.2; }
+  100% { transform: translateY(0);    opacity: 1; }
+}
 .couple-photo__frame {
   position: relative;
   border-radius: 20px;
@@ -982,4 +1026,3 @@ img, svg { display: block; max-width: 100%; }
   margin-top: 10px;
   opacity: 0.75;
 }
-
