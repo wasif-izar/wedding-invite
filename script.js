@@ -55,7 +55,22 @@ function openInvitation() {
 
       /* Trigger initial reveal for hero section */
       triggerReveal();
+
+      /* Show scroll hint 2s after invite opens */
+      const scrollHint = document.getElementById('scroll-hint');
+      if (scrollHint) {
+        setTimeout(() => scrollHint.classList.add('show'), 2000);
+      }
     }, { once: true });
+
+    /* Fallback: if animationend never fires, still show hint */
+    setTimeout(() => {
+      const scrollHint = document.getElementById('scroll-hint');
+      if (scrollHint && !scrollHint.classList.contains('show')) {
+        triggerReveal();
+        scrollHint.classList.add('show');
+      }
+    }, 3500);
 
   }, 350); // slight delay so press animation is felt
 }
@@ -155,4 +170,17 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   window.addEventListener('scroll', onScroll, { passive: true });
 }
 
+/* ─────────────────────────────────────────
+   8.  Hide scroll hint once user scrolls
+───────────────────────────────────────── */
+const scrollHint = document.getElementById('scroll-hint');
+if (scrollHint) {
+  const hideScrollHint = () => {
+    if (window.scrollY > 40) {
+      scrollHint.classList.add('hide');
+      window.removeEventListener('scroll', hideScrollHint);
+    }
+  };
+  window.addEventListener('scroll', hideScrollHint, { passive: true });
+}
 
