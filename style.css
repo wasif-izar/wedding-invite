@@ -387,8 +387,8 @@ img, svg { display: block; max-width: 100%; }
 
 .hero-together {
   font-family: var(--font-serif);
-  font-size: clamp(1.05rem, 3.5vw, 1.25rem);
-  color: var(--text-light);
+  font-size: clamp(1.2rem, 4vw, 1.5rem);
+  color: var(--text-mid);
   letter-spacing: 1px;
   margin-bottom: 12px;
 }
@@ -419,10 +419,10 @@ img, svg { display: block; max-width: 100%; }
 
 .hero-invite-text {
   font-family: var(--font-serif);
-  font-size: clamp(1.05rem, 3.3vw, 1.3rem);
+  font-size: clamp(1.2rem, 4vw, 1.5rem);
   color: var(--text-mid);
   font-style: italic;
-  line-height: 1.6;
+  line-height: 1.8;
   margin: 8px 0 24px;
 }
 
