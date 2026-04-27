@@ -959,9 +959,9 @@ img, svg { display: block; max-width: 100%; }
    ══════════════════════════════════════════════════════════ */
 .scroll-hint {
   position: fixed;
-  bottom: 28px;
+  top: 70%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   color: var(--gold-dark);
   opacity: 0;
   pointer-events: none;
