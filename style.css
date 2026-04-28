@@ -418,12 +418,18 @@ img, svg { display: block; max-width: 100%; }
   margin: 4px 0;
 }
 
+.name-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  justify-content: center;
+}
+
 .name-degree {
-  font-family: var(--font-serif);
-  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  font-family: var(--font-serif) !important;
+  font-size: clamp(0.85rem, 2.5vw, 1rem);
   color: var(--text-light);
   font-style: italic;
-  vertical-align: middle;
 }
 
 .name-entry {
