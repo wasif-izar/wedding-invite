@@ -407,8 +407,8 @@ img, svg { display: block; max-width: 100%; }
   color: var(--text-dark);
   line-height: 1.1;
 }
-.name--groom { color: var(--text-dark); }
-.name--bride { color: var(--green); }
+.name--groom { color: #7B2538; }
+.name--bride { color: #6B7C3A; }
 .names-amp {
   font-family: var(--font-cursive);
   font-size: clamp(1.6rem, 5.5vw, 2.4rem);
